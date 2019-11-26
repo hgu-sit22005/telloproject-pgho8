@@ -8,9 +8,16 @@ tello = Tello()
 
 command_lst = []
 command_lst.append(TelloPro.get_instance('takeoff', -1))
-command_lst.append(TelloPro.get_instance('up',50))
-command_lst.append(TelloPro.get_instance('forward',50))
+command_lst.append(TelloPro.get_instance('up',30))
+
+command_lst.append(TelloPro.get_instance('left',30))
+command_lst.append(TelloPro.get_instance('right',30))
+command_lst.append(TelloPro.get_instance('forward',30))
+command_lst.append(TelloPro.get_instance('back',30))
+command_lst.append(TelloPro.get_instance('cw',30))
 command_lst.append(TelloPro.get_instance('down',30))
+for i in range(4):
+	command_lst.append(TelloPro.get_instance('filp',i))
 command_lst.append(TelloPro.get_instance('land', -1))
 
 for command in command_lst:
